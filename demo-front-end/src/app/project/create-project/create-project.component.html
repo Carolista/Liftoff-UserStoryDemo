@@ -3,10 +3,12 @@
   <h3>Create a New Project</h3>
 
   <form #projectForm="ngForm" (ngSubmit)="saveProject()">
+
     <div>
       <h5>What would you like to call your project?</h5>
       <input type='text' #name placeholder="Project Name" (change)="updateName(name)" /> 
     </div>
+
     <div>
       <h5>Select your room type:</h5>
       <div *ngFor="let room of rooms; let r = index">
@@ -16,9 +18,9 @@
         </label>
       </div>
     </div>
+
     <div>
       <h5>What are the room's general dimensions?</h5>
-      <!-- <div> -->
         <label>
           <input #roomLength type="number" min="1" (change)="updateRoomLength(roomLength)" />
           Length (ft.)
@@ -31,7 +33,6 @@
           <input #roomHeight type="number" min="1" (change)="updateRoomHeight(roomHeight)" />
           Ceiling Height (ft.)
         </label>
-      <!-- </div> -->
     </div>
 
     <button type="submit">Create Project</button>
