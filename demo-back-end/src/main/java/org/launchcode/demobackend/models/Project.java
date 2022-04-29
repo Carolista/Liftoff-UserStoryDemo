@@ -1,6 +1,6 @@
 package org.launchcode.demobackend.models;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
 @Entity
 public class Project extends NamedEntity {
