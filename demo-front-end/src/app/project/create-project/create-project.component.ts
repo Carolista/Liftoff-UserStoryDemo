@@ -25,7 +25,6 @@ export class CreateProjectComponent implements OnInit {
     this.project.name = name.value;
   }
   updateRoomType(roomType: HTMLInputElement) {
-    console.log("roomType is " + roomType.value);
     this.project.roomType = roomType.value
   }
   updateRoomLength(roomLength: HTMLInputElement) {
@@ -46,7 +45,7 @@ export class CreateProjectComponent implements OnInit {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'localhost:4200', // Deal with CORS policy issues
+        'Access-Control-Allow-Origin': 'http://localhost:4200', // Deal with CORS policy issues
       },
       body: JSON.stringify(this.project),
     });
